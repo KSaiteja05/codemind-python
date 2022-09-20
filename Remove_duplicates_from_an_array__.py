@@ -1,0 +1,7 @@
+n=int(input())
+s=set(map(int,input().split()))
+s=str(s)
+s=s.replace('{','')
+s=s.replace('}','')
+s=s.replace(',','')
+print(''.join(s))
