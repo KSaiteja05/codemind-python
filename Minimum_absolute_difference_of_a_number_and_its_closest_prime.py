@@ -1,27 +1,26 @@
-def isprime(n):
-    if n==0:
-        return 0
-    else:
-        for i in range(2,n//2):
-            if(n%i==0):
-                return 0
-    return 1
-def fisprime(n):
-    while(n!=0):
-        n+=1
-        if(isprime(n)==1):
-            return n
-def lisprime(n):
-    while(n!=0):
-        n-=1
-        if(isprime(n)==1):
-            return n
 n=int(input())
-if(isprime(n)==1):
-    print(0)
+m=q=n
+while(n):
+    prime=True
+    for i in range(2,int(n**(0.5)+1)):
+        if(n%i==0):
+            prime=False
+    if(prime==True):
+        x=n
+        break
+    else:
+        n+=1
+while(m):
+    prime=True
+    for i in range(2,int(m**(0.5)+1)):
+        if(m%i==0):
+            prime=False
+    if(prime==True):
+        y=m
+        break
+    else:
+        m-=1
+if(x-q<q-y):
+    print(x-q)
 else:
-    x=fisprime(n)
-    y=lisprime(n)
-    x=x-n
-    y=n-y
-    print(min(x,y))
+    print(q-y)
