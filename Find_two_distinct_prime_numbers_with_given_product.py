@@ -1,21 +1,17 @@
-def isprime(n):
-    cnt=0
-    for i in range(1,n+1):
-        if(n%i==0):
-            cnt+=1
-    if(cnt==2):
-        return 1
-    else:
-        return 0
 n=int(input())
-x=0
-for i in range(1,n+1):
-    for j in range(1,n+1):
-        if(isprime(i)==1 and isprime(j) and i*j==n):
-            print(i,j)
-            x=1
+def isprime(n):
+    if(n<=1):
+        return 0
+    for i in range(2,n):
+        if(n%i==0):
+            return 0
+    return 1
+p=-1
+for i in range(n):
+    for j in range(n):
+        if(i*j==n and isprime(i)==1 and isprime(j)==1):
+            p=1
+            x=i
+            y=j
             break
-    if(x==1):
-        break
-if(x==0):
-    print(-1)
+print(y,x) if p==1 else print(p)
