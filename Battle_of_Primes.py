@@ -1,23 +1,18 @@
-def isprime(s):
-    cnt=0
-    for i in range(1,s+1):
-        if(s%i==0):
-            cnt+=1
-    if(cnt==2):
-        return True
-    else:
-        return False
-f=int(input())
-l=int(input())
-s=f+l
-c=0
-if(isprime(s)==True):
-    s+=1
-    c+=1
-while(s):
-    if(isprime(s)==True):
+a=int(input())
+b=int(input())
+def isprime(n):
+    if(n<=1):
+        return 0
+    for i in range(2,n):
+        if(n%i==0):
+            return 0
+    return 1
+n=a+b
+c=i=1
+while(n):
+    if(isprime(n+i)==1):
         break
     else:
-        s+=1
-    c+=1
+        c+=1
+        i+=1
 print(c)
