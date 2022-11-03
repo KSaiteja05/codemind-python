@@ -1,0 +1,32 @@
+n=input()
+s=''
+l=[]
+l.append(n)
+if(n[0]=='6'):
+    s='9'+n[1]+n[2]+n[3]
+    l.append(s)
+else:
+    s='6'+n[1]+n[2]+n[3]
+    l.append(s)
+s=''
+if(n[1]=='6'):
+    s=n[0]+'9'+n[2]+n[3]
+    l.append(s)
+else:
+    s=n[0]+'6'+n[2]+n[3]
+    l.append(s)
+s=''
+if(n[2]=='6'):
+    s=n[0]+n[1]+'9'+n[3]
+    l.append(s)
+else:
+    s=n[0]+n[1]+'6'+n[3]
+    l.append(s)
+s=''
+if(n[3]=='6'):
+    s=n[0]+n[1]+n[2]+'9'
+    l.append(s)
+else:
+    s=n[0]+n[1]+n[2]+'6'
+    l.append(s)
+print(max(l))
