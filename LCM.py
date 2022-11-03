@@ -1,7 +1,14 @@
 a,b=map(int,input().split())
-i=a
-while True:
-    if(i%a==0 and i%b==0):
-        print(i)
-        break
-    i+=1
+x=a
+y=b
+while(a!=0 and b!=0):
+    if(a>b):
+        a-=b
+    else:
+        b-=a
+if(b==0):
+    gcd=a
+else:
+    gcd=b
+lcm=(x*y)//gcd
+print(lcm)
