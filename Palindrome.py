@@ -1,2 +1,2 @@
-n=int(input())
-print(n==int(str(n)[::-1]))
+n=input()
+print(n[::-1]==n)
